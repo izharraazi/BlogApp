@@ -1,0 +1,54 @@
+<template name="search_zlog">
+  
+    <table class="table table-striped">
+        <tbody>
+                    <tr>
+                        <th>Erase_IMEI</th>
+                        <th>MEID</th>
+                        <th>model_id</th>
+                        <th>device_carrier</th>
+                        <th>device_manufacturer</th>
+                        <th>device_model_number</th>
+                        <th>device_bluetooth_address</th>
+                        <th>erase_datetime</th>
+                        <th>process_type</th>
+                        <th>device_firmware</th>
+                        <th>erase_userid</th>
+                        <th>site_name</th>
+                        <th>function_test</th>
+                        <th>customer_name</th>
+                        <th>device_capacity</th>
+                        <th></th>
+                    </tr>
+                    {{#each zlog_transactions}}
+                        <tr>
+                            <td>{{erase_imei}}</td>
+                            <td>{{erase_meid}}</td>
+                            <td>{{model_id}}</td>
+                            <td>{{device_carrier}}</td>
+                            <td>{{device_manufacturer}}</td>
+                            <td>{{device_model_number}}</td>
+                            <td>{{device_bluetooth_address}}</td>
+                            <td>{{erase_datetime}}</td>
+                            <td>{{process_type}}</td>
+                             <td>{{device_firmware}}</td>
+                             <td>{{erase_userid}}</td>
+                            <td>{{site_name}}</td>
+                            <td>{{function_test}}</td>
+                            <td>{{customer_name}}</td>
+                            <td>{{device_capacity}}</td>
+                           
+
+
+                            
+                        </tr>
+                    {{else}}
+                   
+                        There are no transactions or its loading!!
+                      
+                    {{/each}}
+
+                    </tbody>
+                </table>
+    <!-- /container -->
+</template>
